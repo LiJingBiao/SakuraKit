@@ -356,7 +356,8 @@ SEL getSelectorWithPattern(const char *prefix, const char *key, const char *suff
     UIImage *image = nil;
     if (imageName && imageName.length) {
         if (_currentSakuraType == TXSakuraTypeMainBundle) {
-            image = [UIImage imageNamed:imageName];
+            image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+//            image = [UIImage imageNamed:imageName];
         }else if (_currentSakuraType == TXSakuraTypeSandbox) {
             image = [self _getImagePathWithImageName:imageName fileType:kTXImageExtensionPNG];
             if (!image) {

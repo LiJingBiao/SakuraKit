@@ -18,6 +18,11 @@ TXSakuraBlockDeclare(TXSakuraBar)
 /** Unselected items in this tab bar will be tinted with this color. Setting this value to nil indicates that UITabBar should use its default value instead. */
 - (TXSakuraBarBlock)unselectedItemTintColor NS_AVAILABLE_IOS(10_0);
 
+- (TXSakuraBarBlock)itemBackgroundImage;
+
+- (TXSakuraBarBlock)itemBackgroundColor;
+
+
 // UIToolBar
 - (TXSakuraBarBlock)barStyle;
 - (TXSakuraBarBlock)tintColor;
@@ -28,6 +33,12 @@ TXSakuraBlockDeclare(TXSakuraBar)
 - (TXSakuraBarBlock)keyboardAppearance;
 @end
 
-TXSakuraCategoryDeclare(UITabBar, TXSakuraBar)
+//TXSakuraCategoryDeclare(UITabBar, TXSakuraBar)
 TXSakuraCategoryDeclare(UIToolbar, TXSakuraBar)
 TXSakuraCategoryDeclare(UISearchBar, TXSakuraBar)
+
+@interface UITabBar (TXSakuraBar)
+
+@property (strong, nonatomic) TXSakuraBar *sakura;
+
+@end

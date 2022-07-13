@@ -94,7 +94,7 @@ NSTimeInterval const TXSakuraSkinChangeDuration = 0.25;
 - (instancetype)initWithOwner:(id)owner {
     if (self = [super init]) {
         _owner = owner;
-        _imageRenderingMode = UIImageRenderingModeAlwaysOriginal;
+        _imageRenderingMode = UIImageRenderingModeAlwaysTemplate;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateSakuraSkins) name:TXSakuraSkinChangeNotification object:nil];
     }
     return self;
