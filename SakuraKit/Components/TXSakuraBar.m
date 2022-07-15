@@ -120,6 +120,7 @@ TXSakuraCategoryImplementation(UISearchBar, TXSakuraBar)
             appearance.stackedLayoutAppearance.selected.titleTextAttributes = selectedAttr;
             appearance.stackedLayoutAppearance.normal.iconColor = normalColor;
             appearance.stackedLayoutAppearance.selected.iconColor = selectedColor;
+            appearance.shadowImage = [self createImageWithColor:[UIColor clearColor]];
         }
         
         if (@available(iOS 15.0, *)) {
