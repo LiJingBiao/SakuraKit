@@ -6,6 +6,7 @@
 //  Copyright © 2017 tingxins. All rights reserved.
 //
 #define TXSakuraRGBHex(hex) [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16))/255.0 green:((float)((hex & 0xFF00) >> 8))/255.0 blue:((float)(hex & 0xFF))/255.0 alpha:1.0]
+#define TXSakuraRGBAHex(hex) [UIColor colorWithRed:((float)((hex & 0xFF000000) >> 24))/255.0 green:((float)((hex & 0xFF0000) >> 16))/255.0 blue:((float)((hex & 0xFF00) >> 8))/255.0 alpha:((float)(hex & 0xFF))/255.0]
 
 #import "TXSakuraManager.h"
 #import "ZipArchive.h"
@@ -506,7 +507,7 @@ SEL getSelectorWithPattern(const char *prefix, const char *key, const char *suff
     
     NSUInteger hex = [self _intFromHexString:hexStr];
     if(hexStr.length > 6) {
-        return TXSakuraRGBHex(hex);
+        return TXSakuraRGBAHex(hex);
     }
     return TXSakuraRGBHex(hex);
 }
