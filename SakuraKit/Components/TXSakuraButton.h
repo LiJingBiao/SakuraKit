@@ -20,7 +20,8 @@ TXSakura2DStateBlockDeclare(TXSakuraButton)
 - (TXSakuraButton2DStateBlock)titleColor;//setTitleColor:forState:
 - (TXSakuraButton2DStateBlock)image;//setImage:forState:
 - (TXSakuraButton2DStateBlock)backgroundImage;//setBackgroundImage:forState:
-
+//自定义
+- (TXSakuraButton2DStateBlock)backgroundStateColor;
 @end
 
 TXSakuraCategoryDeclare(UIButton, TXSakuraButton)

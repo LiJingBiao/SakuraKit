@@ -37,6 +37,10 @@
 - (TXSakuraButton2DStateBlock)backgroundImage {
     return (TXSakuraButton2DStateBlock)[super tx_sakuraImageForStateBlockWithName:NSStringFromSelector(_cmd)];
 }
+//自定义
+- (TXSakuraButton2DStateBlock)backgroundStateColor {
+    return (TXSakuraButton2DStateBlock)[super tx_sakuraTitleColorForStateBlockWithName:NSStringFromSelector(_cmd)];
+}
 
 @end
 
